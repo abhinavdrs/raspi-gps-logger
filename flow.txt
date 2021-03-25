@@ -1,0 +1,5 @@
+
+myscript.service -> collectLogStr2str.sh -> mountusb.sh ==> Log_collection_begins
+
+shutdown_button.service (listens for shutdown/reboot) -> shutdown_button.py == system shutdowns/reboots.
+ 

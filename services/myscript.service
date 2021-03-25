@@ -1,0 +1,10 @@
+[Unit]
+Description=Log Collection and USB Mounting Service
+After=network.target
+DefaultDependencies=no
+[Service]
+Type=idle
+ExecStart=/home/pi/Desktop/source_code/collectLogStr2str.sh
+
+[Install]
+WantedBy=multi-user.target

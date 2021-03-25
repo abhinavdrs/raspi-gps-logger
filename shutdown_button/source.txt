@@ -1,0 +1,3 @@
+https://scruss.com/blog/2017/10/21/combined-restart-shutdown-button-for-raspberry-pi/
+
+Git : https://github.com/scruss/shutdown_button
