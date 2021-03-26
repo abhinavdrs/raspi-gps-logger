@@ -1,4 +1,6 @@
-# raspi-gps-logger is a raspberrypi based GPS logs collection unit. It uses SimpleRTK2B GNSS antenna and stores collected GPS data on an attached USB.
+# raspi-gps-logger is a Raspberrypi based GPS logs collection unit. It uses SimpleRTK2B GNSS antenna and stores collected GPS data on USB.
+
+
 
 ***********************************Setting up your device*****************************************
 			
@@ -58,7 +60,6 @@
 Now the RASPI should have a USB, a button to shutdown/restart and SimpleRTK2B connected to it via a serial port.
 Every boot automatically triggers log collection and the RASPI must either be restarted to collect logs in a new file.
 
-ucentre.png![image](https://user-images.githubusercontent.com/39088910/112604978-cccb7580-8e3c-11eb-89b3-de76506c131f.png)
 
 1) Power on the RASPI > Log collection begins a few seconds later after powering up.
 2) Once collection is done: Press shutdown/restart button to stop log collection. 
