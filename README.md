@@ -1,8 +1,7 @@
-# raspi-gps-logger is a Raspberrypi based GPS logs collection unit. It uses SimpleRTK2B GNSS antenna and stores collected GPS data on USB.
-
-
+# raspi-gps-logger : A Raspberrypi based GPS logs collection unit.
 
 ***********************************Setting up your device*****************************************
+It uses SimpleRTK2B GNSS antenna and stores collected GPS data on USB.
 			
 	1) Configure simple RTK2B using UBX: Enable the receiver to receive RAW logs
 		a. Connect RTK2B to windows PC (via USB) which has u-center installed.
