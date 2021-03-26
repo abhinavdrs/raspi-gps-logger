@@ -1,4 +1,7 @@
-# raspi-gps-logger
+# raspi-gps-logger is a raspberrypi based GPS logs collection unit. It uses SimpleRTK2B GNSS antenna and stores collected GPS data on an attached USB.
+
+***********************************Setting up your device*****************************************
+			
 	1) Configure simple RTK2B using UBX: Enable the receiver to receive RAW logs
 		a. Connect RTK2B to windows PC (via USB) which has u-center installed.
 		b. Open u-center and choose appropriate COM port so that the connection with RTK is established.
@@ -10,7 +13,7 @@
 
 	
 
-	2) Setup Raspi to create a mount point and map USB to it. Needs improvement
+	2) Setup Raspi to create a mount point and map USB to it. Open the file and replace "RTKLOGGER' with the name of your USB stick.(Needs improvement)
 
 	Copy mountusb.py module in /home/pi/Desktop/source_code
 
@@ -29,7 +32,7 @@
 		
 
 
-	5) Attach the button as shown below.
+	5) Attach the button as shown below. (to be added)
 		a.  The pins used on Raspberry pi is GPIO 27 and any of  the nearest ground pin. 
 	
 	6) Setup  shutdown_button  to gracefully stop log collection and reboot /shutdown the system.
@@ -41,11 +44,20 @@
 			    chmod +x shutdown_button.py
 			   
 		b. Enable Shutdown_button_service
-			   
-			#copy shutdown_button.py t0 /usr/local/bin
 			    sudo cp shutdown_button.py /usr/local/bin
 			# enable shutdown button service
 			    sudo cp shutdown_button.service /etc/systemd/system/shutdown_button.service
 			    sudo systemctl enable shutdown_button.service
-			    sudo systemctl start shutdown_button.service. // Should complete without errors.
+			    sudo systemctl start shutdown_button.service.
 
+
+***********************************Using the device*****************************************
+
+Now the RASPI should have a USB, a button to shutdown/restart and SimpleRTK2B connected to it via a serial port.
+Every boot automatically triggers log collection and the RASPI must either be restarted to collect logs in a new file.
+
+1) Power on the RASPI > Log collection begins a few seconds later after powering up.
+2) Once collection is done: Press shutdown/restart button to stop log collection. 
+		* The raspi will reboot if button held between 2-5 seconds.
+		* The raspi will shutdown if button held for more than 10 seconds.
+3) Once the Raspi is shutdown, the logs will be stored with .ubx extension and named with date + timestamp.
