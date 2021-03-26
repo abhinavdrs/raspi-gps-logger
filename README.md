@@ -48,4 +48,4 @@
 			    sudo cp shutdown_button.service /etc/systemd/system/shutdown_button.service
 			    sudo systemctl enable shutdown_button.service
 			    sudo systemctl start shutdown_button.service. // Should complete without errors.
-![image](https://user-images.githubusercontent.com/39088910/112601364-60e70e00-8e38-11eb-9ae9-9182c8936af8.png)
+
