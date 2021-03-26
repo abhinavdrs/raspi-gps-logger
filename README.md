@@ -6,8 +6,9 @@
 		a. Connect RTK2B to windows PC (via USB) which has u-center installed.
 		b. Open u-center and choose appropriate COM port so that the connection with RTK is established.
 	
-	![Screenshot](images/ucentre.png)
 	
+	ucentre.png![image](https://user-images.githubusercontent.com/39088910/112604978-cccb7580-8e3c-11eb-89b3-de76506c131f.png)
+
 		
 		a. Enable UBX-RXM-RAWX and UBX-RXM-SFRBX from Ucentre
 
@@ -53,8 +54,11 @@
 
 ***********************************Using the device*****************************************
 
+
 Now the RASPI should have a USB, a button to shutdown/restart and SimpleRTK2B connected to it via a serial port.
 Every boot automatically triggers log collection and the RASPI must either be restarted to collect logs in a new file.
+
+ucentre.png![image](https://user-images.githubusercontent.com/39088910/112604978-cccb7580-8e3c-11eb-89b3-de76506c131f.png)
 
 1) Power on the RASPI > Log collection begins a few seconds later after powering up.
 2) Once collection is done: Press shutdown/restart button to stop log collection. 
